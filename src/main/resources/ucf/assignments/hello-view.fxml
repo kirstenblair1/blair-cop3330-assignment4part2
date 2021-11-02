@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.AppController">
+
+
+    <children>
+        <VBox prefHeight="400.0" prefWidth="170.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="170.0" text="Lists:" textAlignment="CENTER" />
+                <ListView prefHeight="355.0" prefWidth="170.0" />
+                <Button alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#getList" prefHeight="25.0" prefWidth="170.0" text="Edit Selected List" textAlignment="CENTER" />
+            </children>
+        </VBox>
+
+        <VBox layoutX="170.0" prefHeight="400.0" prefWidth="170.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="20.0" prefWidth="170.0" text="Tasks: " textAlignment="CENTER" />
+                <ListView prefHeight="355.0" prefWidth="170.0" />
+                <Button mnemonicParsing="false" onAction="#getTask" prefHeight="25.0" prefWidth="170.0" text="Edit Selected Task" textAlignment="CENTER" />
+            </children>
+        </VBox>
+
+
+        <VBox layoutX="350.0" layoutY="14.0" prefHeight="175.0" prefWidth="175.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#printTasks" prefHeight="25.0" prefWidth="175.0" text="Display Tasks" />
+                <Button mnemonicParsing="false" onAction="#printIncompleteList" prefHeight="25.0" prefWidth="175.0" text="Show Incomplete List Tasks" />
+                <Button mnemonicParsing="false" onAction="#printCompletedList" prefHeight="25.0" prefWidth="175.0" text="Show Completed List Tasks" />
+                <Button mnemonicParsing="false" onAction="#taskCompleted" prefHeight="25.0" prefWidth="175.0" text="Mark Task Completed"/>
+            </children>
+        </VBox>
+
+        <VBox layoutX="358.0" layoutY="200.0" prefHeight="200.0" prefWidth="350.0">
+            <children>
+                <TextArea prefHeight="100.0" prefWidth="255.0" />
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <VBox prefHeight="100.0" prefWidth="175.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#newList" prefWidth="175.0" text="Add List" />
+                                <Button mnemonicParsing="false" onAction="#removeList" prefHeight="25.0" prefWidth="175.0" text="Remove List" />
+                                <Button mnemonicParsing="false" onAction="#editListName" prefWidth="175.0" text="Edit List Name" />
+                            </children>
+                        </VBox>
+
+                        <VBox prefHeight="100.0" prefWidth="175.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#newTask" prefWidth="175.0" text="Add Task" />
+                                <Button mnemonicParsing="false" onAction="#removeTask" prefWidth="175.0" text="Remove Task" />
+                                <Button mnemonicParsing="false" onAction="#editTaskDesc" prefWidth="175.0" text="Edit Task Description" />
+                                <Button mnemonicParsing="false" onAction="#editDueDate" prefWidth="175.0" text="Edit Task Date" />
+                            </children>
+                        </VBox>
+
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+
+</AnchorPane>

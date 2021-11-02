@@ -1,0 +1,61 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class AppController{
++newList()
++newTask()
++getList()
++getTask()
++printTasks()
++removeList()
++removeTask()
++editListName()
++editTaskDesc()
++editDueDate()
++printIncompleteList()
++printCompletedList()
+}
+
+class ListManager{
++Add()
++Remove()
++Load()
++loadLists()
++SaveItems()
++SaveAllItems()
++findItem()
++findList()
+}
+
+class MainApp{
+start()
+main()
+}
+
+class ToDoList{
+
+String name
+
++SetName()
++AddTask()
++RemoveTask()
++ReturnTaskNames()
++CompletedTasks()
++IncompleteTasks()
+}
+
+class ToDoTasks{
+String name
+String descrip
+String DueDate
+boolean completion
+
++SetName
++SetDesc
++SetDue
++setCompleted
++DisplayTask()
+}
+
+@enduml
